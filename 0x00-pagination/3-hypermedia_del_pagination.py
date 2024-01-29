@@ -64,7 +64,10 @@ class Server:
         start_index = index if index is not None else 0
         end_index = start_index + page_size
 
-        data = [indexed_dataset[i] for i in range(start_index, min(end_index, len(indexed_dataset)))]
+        data = [
+            indexed_dataset[i]
+            for i in range(start_index, min(end_index, len(indexed_dataset)))
+        ]
 
         next_index = end_index if end_index < len(indexed_dataset) else None
 
