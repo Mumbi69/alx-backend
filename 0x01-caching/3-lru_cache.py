@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-""" LRUCache module"""
+"""The LRUCache module"""
 from base_caching import BaseCaching
 
 
 class LRUCache(BaseCaching):
-    """ LRUCache class that inherits from BaseCaching"""
+    """Representation of LRUCache class that inherits from BaseCaching"""
     def __init__(self):
         """ Initialize LRUCache"""
         super().__init__()
@@ -14,7 +14,6 @@ class LRUCache(BaseCaching):
         """ Add an item in the cache"""
         if key is not None and item is not None:
             if len(self.cache_data) >= self.MAX_ITEMS:
-                # Discard the least recently used item (LRU algorithm)
                 lru_key = self.order.pop(0)
                 del self.cache_data[lru_key]
                 print("DISCARD: {}".format(lru_key))

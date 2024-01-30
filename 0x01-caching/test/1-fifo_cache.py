@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-"""The FIFO Cache module"""
+""" FIFO Cache module"""
 from base_caching import BaseCaching
 
 
 class FIFOCache(BaseCaching):
-    """Representation of FIFOCache class that inherits from BaseCaching"""
+    """ FIFOCache class that inherits from BaseCaching"""
     def __init__(self):
         """ Initialize FIFOCache"""
         super().__init__()

@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-""" LIFOCache module"""
+"""The LIFOCache module"""
 from base_caching import BaseCaching
 
 
 class LIFOCache(BaseCaching):
-    """ LIFOCache class that inherits from BaseCaching"""
+    """Representation of LIFOCache class that inherits from BaseCaching"""
     def __init__(self):
         """ Initialize LIFOCache
         """
