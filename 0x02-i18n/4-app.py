@@ -24,16 +24,16 @@ app.config.from_object(Config)
 @babel.localeselector
 def get_locale():
     """This function determines the best-matching language"""
-    locale = request.args.get("locale")
-    if locale in Config.LANGUAGES:
-        return locale
+    requested_locale = request.args.get('locale')
+    if requested_locale in app.config['LANGUAGES']:
+         return requested_locale
     return request.accept_languages.best_match(app.config['LANGUAGES'])
 
 
 @app.route('/')
 def index():
-    """renders template 3-index.html"""
-    return render_template('3-index.html')
+    """renders template 4-index.html"""
+    return render_template('4-index.html')
 
 
 if __name__ == '__main__':
