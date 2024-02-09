@@ -8,8 +8,8 @@ app = Flask(__name__)
 
 
 @app.route('/')
-def Welcome():
-    """represents the function welcome"""
+def index():
+    """renders template 0-index.html"""
     return render_template('0-index.html')
 
 
